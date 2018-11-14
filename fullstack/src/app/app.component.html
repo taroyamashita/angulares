@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<header> 
+  <h1> {{title}}</h1>
+<nav>
+  <ul>
+    <li> <a routerLink="/home"> Home </a></li>
+    <li> <a routerLink="/directory"> Directory </a></li>
+  </ul>
+</nav>
+</header>
+<section id="main">
+  <!-- <app-home [project]="project" (onYell)="yell($event)">Yo!</app-home> -->
+  <router-outlet></router-outlet>
+</section>
+<router-outlet></router-outlet>
