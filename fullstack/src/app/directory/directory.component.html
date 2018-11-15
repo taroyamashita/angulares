@@ -1,3 +1,7 @@
 <p>
   directory works!
 </p>
+<ul>
+  <li *ngFor="let project of projects" [routerLink]="['detail', project.name]">{{project.name}}</li>
+</ul>
+<router-outlet></router-outlet>

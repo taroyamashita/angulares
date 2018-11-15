@@ -6,18 +6,26 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { ProjectComponent } from './project/project.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'directory', component: DirectoryComponent},
-  { path: 'home', component: HomeComponent }
+  { path: 'directory', children: [
+    {path: 'list', component: DirectoryComponent, children:[
+      {path: 'detail/:name', component: ProjectComponent}
+    ]}
+  ]},
+  { path: 'home', component: HomeComponent },
+  { path: "**", redirectTo: '/home', pathMatch: 'full'},
+  { path: '**', redirectTo: '/home', pathMatch: 'full'}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
