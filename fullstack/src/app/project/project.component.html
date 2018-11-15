@@ -1,4 +1,20 @@
-<p>
+<p [ngClass]="classes">
   project works!
 </p>
 <h3>{{name}}</h3>
+
+<p *ngIf="false">Only show if test is true</p>
+
+
+<style>
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.underline{
+  text-decoration: underline;
+}
+
+</style>

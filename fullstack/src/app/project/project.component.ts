@@ -9,10 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 export class ProjectComponent implements OnInit {
   name: any;
   sub: any;
-  constructor(private route:ActivatedRoute) { }
+  classes={'blue': true, 'red': false, 'underline':true}
+  constructor(private route:ActivatedRoute) { };
+
+ 
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
+      console.log(params);
       this.name = params['name']
     })
   }

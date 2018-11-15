@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { ProjectComponent } from './project/project.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FilterPipe } from './filter.pipe';
 
 const appRoutes: Routes = [
   { path: 'directory', children: [
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     DirectoryComponent,
-    ProjectComponent
+    ProjectComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

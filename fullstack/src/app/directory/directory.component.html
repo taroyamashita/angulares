@@ -1,7 +1,12 @@
+
+<form id="filter">
+  <label>Filter Projects By Tag </label>
+  <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}">
+</form>
 <p>
   directory works!
 </p>
 <ul>
-  <li *ngFor="let project of projects" [routerLink]="['detail', project.name]">{{project.name}}</li>
+  <li *ngFor="let project of projects | filter:term" [routerLink]="['detail', project.name]">{{project.name | uppercase}}</li>
 </ul>
 <router-outlet></router-outlet>
