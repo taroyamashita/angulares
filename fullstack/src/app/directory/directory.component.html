@@ -9,4 +9,6 @@
 <ul>
   <li *ngFor="let project of projects | filter:term" [routerLink]="['detail', project.name]">{{project.name | uppercase}}</li>
 </ul>
+
+<button (click)="logIt()">Log Me Harder Daddy</button>
 <router-outlet></router-outlet>

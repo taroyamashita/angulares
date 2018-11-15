@@ -9,6 +9,7 @@ import { DirectoryComponent } from './directory/directory.component';
 import { ProjectComponent } from './project/project.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FilterPipe } from './filter.pipe';
+import { LoggingService} from './logging.service';
 
 const appRoutes: Routes = [
   { path: 'directory', children: [
@@ -35,7 +36,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

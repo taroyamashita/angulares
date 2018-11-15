@@ -13,7 +13,12 @@ export class DirectoryComponent implements OnInit {
     {name: 'project3'}
   ]
 
-  constructor() { }
+  constructor(private logger: LoggingService) {
+
+   }
+   logIt(){
+    this.logger.log();
+  }
 
   ngOnInit() {
   }
