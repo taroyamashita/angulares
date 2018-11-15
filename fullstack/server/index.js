@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const firebase = require('firebase');
 
 var config = {
-    apiKey: "AIzaSyBsAY2bthJD9-UT-6XkgzR_1RQ5q47JGvU",
+    apiKey: process.env.DB_API_KEY,
     authDomain: "angulares-f168e.firebaseapp.com",
     databaseURL: "https://angulares-f168e.firebaseio.com",
     projectId: "angulares-f168e",
