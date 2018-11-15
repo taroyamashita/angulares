@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoggingService } from '../logging.service'; 
+import axios from 'axios';
 
 @Component({
   selector: 'app-directory',
@@ -21,6 +22,10 @@ export class DirectoryComponent implements OnInit {
   }
 
   ngOnInit() {
+    axios.get('http://localhost:8069').then((data)=>{
+      console.log(data);
+    })
+    console.log('hi!')
   }
 
 }
