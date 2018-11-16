@@ -4,12 +4,16 @@
 
 <div id="content">
   <nav>Nav</nav>
-  <header> {{ title }}</header>
-  <main>Main</main>
+  <header>
+    <app-profile-header></app-profile-header>
+  </header>
+  <main>
+    <app-project-component *ngFor="let project of projects" [project]="project"></app-project-component>
+  </main>
   <section>Skills</section>
-  
+ 
   <aside>
-      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <!-- <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
           <div class="flipper">
             <div class="front">
               <span class="name">David Walsh</span>
@@ -18,7 +22,8 @@
               <p>Mozilla Web Developer<p></p>
             </div>
           </div>
-        </div>
+        </div> -->
+        Image
   </aside>
   <footer>Copyright Taro Yamashita 2018</footer>
 </div>

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Taro Yamashita';
+  projects = ['project1', 'project2', 'project3', 'project4']
 }
