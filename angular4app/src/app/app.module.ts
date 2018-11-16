@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { ProfileHeaderComponent } from './profile-header/profile-header.component';
 import { ProjectComponentComponent } from './project-component/project-component.component';
 import { MainComponent } from './main/main.component';
+import { FormComponent } from './form/form.component';
+
+
+
 
 
 
@@ -15,6 +19,7 @@ import { MainComponent } from './main/main.component';
     ProfileHeaderComponent,
     ProjectComponentComponent,
     MainComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
