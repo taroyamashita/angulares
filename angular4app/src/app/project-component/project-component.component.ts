@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-project-component',
@@ -7,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectComponentComponent implements OnInit {
 
-  @Input() project:string;
+  @Input() project:any;
+  @Output() eventFromInner = new EventEmitter<string>()
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  projectClickHandler(){
+    console.log('clicked');
+    this.eventFromInner.emit(this.project);
   }
 
 }

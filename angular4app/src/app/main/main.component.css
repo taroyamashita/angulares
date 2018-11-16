@@ -1,0 +1,201 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Archivo');
+
+#content{
+    color: #fff;
+    font-family: 'Archivo', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    grid-template-areas: 
+    "nav nav nav nav"
+    'header header header header'
+    "aside section section section"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+#content div, header, footer, nav, aside, main, section{
+    background: #3bbced;
+    padding: 10px;
+}
+
+#content div:nth-child(even){
+    background: #777777
+}
+
+.nested{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(100px, auto));
+    grid-gap: 5px;
+}
+
+.nested p {
+    border: solid;
+    padding: 20px;
+    margin: 0px;    
+}
+
+header{
+    grid-area: header;
+    background: #3bbced;
+}
+section {
+    grid-area: section;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
+    height: auto;
+}
+
+nav {
+    grid-area: nav; 
+}
+
+@media screen and (max-width: 400px){
+    #content{
+        color: #fff;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        grid-template-areas: 
+        'header header header header'
+        "aside aside aside aside"
+        "section section section section"
+        "main main main main"
+        "nav nav nav nav"
+        "footer footer footer footer";
+    }
+
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+	.flip-container:hover .flipper,  
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: auto;
+	height: auto;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	background: url(http://davidwalsh.name/demo/dwflip.jpg) 0 0 no-repeat;
+	z-index: 2;
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	background: #f8f8f8;
+}
+
+.front .name {
+	font-size: 2em;
+	display: inline-block;
+	background: rgba(33, 33, 33, 0.9);
+	color: #f8f8f8;
+	font-family: Courier;
+	padding: 5px 10px;
+	border-radius: 5px;
+	bottom: 60px;
+	left: 25%;
+	position: relative;
+	text-shadow: 0.1em 0.1em 0.05em #333;
+
+}
+
+.back-logo {
+	position: relative;
+	top: 40px;
+	left: 90px;
+	width: 160px;
+	height: 117px;
+	background: url(http://davidwalsh.name/demo/logo.png) 0 0 no-repeat;
+}
+
+.back-title {
+	font-weight: bold;
+	color: #00304a;
+	position: absolute;
+	top: 180px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+	font-family: Courier;
+	font-size: 2em;
+}
+
+.back p {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
