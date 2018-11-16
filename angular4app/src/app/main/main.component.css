@@ -21,14 +21,11 @@
     "footer footer footer footer";
 }
 
-#content div, header, footer, nav, aside, main, section{
+#content header, footer, nav, main, aside, section{
     background: #3bbced;
     padding: 10px;
 }
 
-#content div:nth-child(even){
-    background: #777777
-}
 
 .nested{
     display: grid;
@@ -61,7 +58,6 @@ footer {
 
 aside {
     grid-area: aside;
-    height: auto;
 }
 
 nav {
@@ -198,4 +194,25 @@ nav {
 	padding: 0 20px;
   font-family: arial;
   line-height: 2em;
+}
+
+ 
+
+
+.maincontainer{
+    position: relative;
+    width: auto;
+    height: auto;
+    background: green;
+    border: solid
+}
+
+.thecard{
+    background: red;
+    position: absolute;
+}
+
+.theback{
+    background: purple;
+    position: absolute;
 }
