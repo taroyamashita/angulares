@@ -7,5 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Taro Yamashita';
-  projects = ['project1', 'project2', 'project3', 'project4']
+  projects = [  
+    {  
+       "ProjectTitle":"Title of Project1",
+       "Description":"Description of Project1",
+       "Tags":"Tags for Project1"
+    },
+    {  
+       "ProjectTitle":"Title of Project2",
+       "Description":"Description of Project2",
+       "Tags":"Tags for Project2"
+    },
+    {  
+       "ProjectTitle":"Title of Project 1",
+       "Description":"Description of Project1",
+       "Tags":"Tags for Project3"
+    }
+ ]
 }
