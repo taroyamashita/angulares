@@ -16,6 +16,7 @@ export class ProjectComponentComponent implements OnInit {
   }
 
   projectClickHandler(){
+    console.log(window)
     console.log('clicked');
     this.eventFromInner.emit(this.project);
   }
