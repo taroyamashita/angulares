@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { FormComponent } from './form/form.component';
 import { AboutComponent } from './about/about.component';
 import { PixiComponent } from './pixi/pixi.component';
+import { MapComponent } from './map/map.component';
 
 
 
@@ -24,6 +25,7 @@ import { PixiComponent } from './pixi/pixi.component';
     FormComponent,
     AboutComponent,
     PixiComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
